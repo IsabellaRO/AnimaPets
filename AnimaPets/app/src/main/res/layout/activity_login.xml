@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputCPF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="162dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/inputSenha"
+        app:layout_constraintStart_toStartOf="@+id/inputSenha">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/textCPF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/textCPF" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputSenha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonEntrar"
+        app:layout_constraintStart_toStartOf="@+id/buttonSenha"
+        app:layout_constraintTop_toBottomOf="@+id/inputCPF">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/textSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/textSenha" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/buttonSenha"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEntrar"
+        app:layout_constraintTop_toBottomOf="@+id/inputSenha"
+        tools:text="@string/buttonSenha" />
+
+    <Button
+        android:id="@+id/buttonEntrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/buttonEntrar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonSenha"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@string/buttonEntrar" />
+</android.support.constraint.ConstraintLayout>
