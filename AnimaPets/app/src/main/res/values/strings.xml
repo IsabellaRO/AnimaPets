@@ -1,17 +1,3 @@
 <resources>
     <string name="app_name">AnimaPets</string>
-
-    <string-array name="menu_dropdown">
-        <item>  </item>
-        <item>Vantagens</item>
-        <item>Rações</item>
-        <item>Mr.Pet</item>
-        <item>Mensagens</item>
-        <item>Dados Pessoais</item>
-        <item>Configurações</item>
-        <item>Quem Somos</item>
-        <item>Fale Conosco</item>
-
-
-    </string-array>
 </resources>
