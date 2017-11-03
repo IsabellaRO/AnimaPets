@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AnimaPets</string>
+    <string name="textSenha">Senha</string>
+    <string name="textCPF">CPF</string>
+    <string name="buttonEntrar">Entrar</string>
+    <string name="buttonSenha">Esqueci minha senha</string>
+    <string name="searchV">Search</string>
 </resources>
