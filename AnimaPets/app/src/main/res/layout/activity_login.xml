@@ -19,7 +19,8 @@
             android:id="@+id/textCPF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/textCPF" />
+            android:hint="@string/textCPF"
+            android:inputType="number" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -35,7 +36,8 @@
             android:id="@+id/textSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/textSenha" />
+            android:hint="@string/textSenha"
+            android:inputType="textPassword" />
     </android.support.design.widget.TextInputLayout>
 
     <Button

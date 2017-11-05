@@ -13,12 +13,12 @@ public class VitrineActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vitrine);
-        txtSearch = (TextView) findViewById(R.id.searchV);
+       // setContentView(R.layout.activity_vitrine);
+        //txtSearch = (TextView) findViewById(R.id.searchV);
     }
 
     protected void search() {
-        String pesquisa = txtSearch.getText().toString();
+       // String pesquisa = txtSearch.getText().toString();
         //fazer varredura na lista de itens
     }
 }
