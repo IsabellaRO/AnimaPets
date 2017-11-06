@@ -24,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        getSupportActionBar().hide();
         txtCPF = (TextView) findViewById(R.id.textCPF);
         txtSenha = (TextView) findViewById(R.id.textSenha);
         loginB = (Button) findViewById(R.id.buttonEntrar);

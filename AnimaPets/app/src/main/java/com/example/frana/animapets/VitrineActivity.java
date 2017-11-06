@@ -17,6 +17,7 @@ public class VitrineActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vitrine);
+        System.out.println("Vitrine 2");
         //txtSearch = (TextView) findViewById(R.id.searchV);
     }
 
