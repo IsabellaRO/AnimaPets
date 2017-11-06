@@ -5,4 +5,9 @@
     <string name="buttonEntrar">Entrar</string>
     <string name="buttonSenha">Esqueci minha senha</string>
     <string name="searchV">Search</string>
+    <string name="ok">ok</string>
+    <string name="carrinho">Carrinho</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="box">Voltar para a box</string>
+    <string name="novidades">Novidades</string>
 </resources>

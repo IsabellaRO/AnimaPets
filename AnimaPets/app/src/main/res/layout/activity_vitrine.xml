@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
+
+    <SearchView
+        android:id="@+id/searchV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="349dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/item2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMenu"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="6dp"
+        android:text="@string/ok"
+        app:layout_constraintBottom_toBottomOf="@+id/searchV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.971"
+        app:layout_constraintStart_toEndOf="@+id/searchV"
+        app:layout_constraintTop_toTopOf="@+id/searchV"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/ButtonCart"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="458dp"
+        android:layout_marginStart="36dp"
+        android:contentDescription="@string/carrinho"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/searchV"
+        app:layout_constraintTop_toBottomOf="@+id/searchV"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@mipmap/noun_1231997_cc" />
+
+    <ImageButton
+        android:id="@+id/buttonBox"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:contentDescription="@string/box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintStart_toEndOf="@+id/buttonHeart"
+        app:layout_constraintTop_toBottomOf="@+id/searchV"
+        app:layout_constraintVertical_bias="0.051"
+        app:srcCompat="@mipmap/noun_1094244_cc" />
+
+    <ImageButton
+        android:id="@+id/buttonNews"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:contentDescription="@string/novidades"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.739"
+        app:layout_constraintStart_toEndOf="@+id/buttonHeart"
+        app:layout_constraintTop_toBottomOf="@+id/searchV"
+        app:layout_constraintVertical_bias="0.051"
+        app:srcCompat="@mipmap/noun_1282654_cc" />
+
+    <ImageButton
+        android:id="@+id/buttonHeart"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="120dp"
+        android:contentDescription="@string/favoritos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.148"
+        app:srcCompat="@drawable/noun_535338_cc" />
+
+    <ImageButton
+        android:id="@+id/item1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="224dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/item"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchV"
+        app:layout_constraintVertical_bias="0.982"
+        app:srcCompat="@drawable/teste" />
+
+    <ImageButton
+        android:id="@+id/item2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="49dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/item3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchV"
+        app:srcCompat="@drawable/teste" />
+
+    <ImageButton
+        android:id="@+id/item3"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/item2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.889"
+        app:srcCompat="@drawable/teste" />
+
+    <ImageButton
+        android:id="@+id/item"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498"
+        app:srcCompat="@drawable/teste" />
+
+</android.support.constraint.ConstraintLayout>
