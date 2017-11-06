@@ -48,15 +48,21 @@ public class LoginActivity extends AppCompatActivity {
         Intent id = new Intent(getApplicationContext(), MainActivity.class);
         for (int i = 1; i < 50; i++) {
             System.out.println(i);
-            enter_user = sql.selecionarCliente(i);
-            Toast.makeText(getApplicationContext(), "user: " + enter_user.getNome(), Toast.LENGTH_LONG);
-            System.out.println(enter_user.getCpf().toString());
-            if (enter_user.getCpf().toString().equals(CPF.toString()) && enter_user.getSenha().toString().equals(Senha.toString())) {
-                id.putExtra("user", enter_user.getCodigo());
-                startActivity(id);
-                Toast.makeText(getApplicationContext(), "user: " + enter_user.getNome().toString(), Toast.LENGTH_LONG);
-                finish();
-                break;
+            try{
+                enter_user = sql.selecionarCliente(i);
+                Toast.makeText(getApplicationContext(), "user: " + enter_user.getNome(), Toast.LENGTH_LONG);
+                System.out.println(enter_user.getCpf().toString());
+                if (enter_user.getCpf().toString().equals(CPF.toString()) && enter_user.getSenha().toString().equals(Senha.toString())) {
+                    id.putExtra("user", enter_user.getCodigo());
+                    startActivity(id);
+                    Toast.makeText(getApplicationContext(), "user: " + enter_user.getNome().toString(), Toast.LENGTH_LONG);
+                    finish();
+                    break;
+
+                }
+            }catch (Exception e){
+                System.out.println("i: "+i);
+                Toast.makeText(getApplicationContext(),"CPF ou Senha Incorretos",Toast.LENGTH_LONG).show();
             }
 
         }
