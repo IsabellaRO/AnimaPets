@@ -24,5 +24,4 @@ public class VitrineActivity extends AppCompatActivity {
         //String pesquisa = txtSearch.getText().toString();
         //fazer varredura na lista de itens
     }
-
 }
