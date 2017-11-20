@@ -6,91 +6,117 @@
     android:layout_height="match_parent"
     tools:layout_editor_absoluteY="81dp">
 
-    <ImageView
-        android:id="@+id/fundo_azul"
-        android:layout_width="500dp"
-        android:layout_height="627dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="4dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fundo_sobreposto2" />
-
-    <ImageView
-        android:id="@+id/retangulo"
-        android:layout_width="483dp"
-        android:layout_height="770dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="84dp"
-        app:layout_constraintStart_toStartOf="@+id/logo"
-        app:layout_constraintTop_toTopOf="@+id/fundo_azul"
-        app:srcCompat="@drawable/retangulo" />
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/inputCPF"
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="162dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/inputSenha"
-        app:layout_constraintStart_toStartOf="@+id/inputSenha">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/textCPF"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/textCPF"
-            android:inputType="number" />
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/inputSenha"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:hint="Senha"
-        app:layout_constraintEnd_toEndOf="@+id/buttonEntrar"
-        app:layout_constraintStart_toStartOf="@+id/buttonSenha"
-        app:layout_constraintTop_toBottomOf="@+id/inputCPF">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/textSenha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/textSenha"
-            android:inputType="textPassword" />
-    </android.support.design.widget.TextInputLayout>
-
-    <Button
-        android:id="@+id/buttonSenha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="13dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/buttonSenha"
-        app:layout_constraintEnd_toStartOf="@+id/buttonEntrar"
-        app:layout_constraintTop_toBottomOf="@+id/inputSenha"
-        tools:text="@string/buttonSenha" />
-
-    <Button
-        android:id="@+id/buttonEntrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:text="@string/buttonEntrar"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonSenha"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:text="@string/buttonEntrar" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="354dp"
-        android:layout_height="394dp"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        <ImageView
+            android:id="@+id/fundoAzul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/fundosobreposto"
+            app:srcCompat="@drawable/fundo_sobreposto6" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="188dp"
+            android:contentDescription="@string/logo"
+            app:srcCompat="@drawable/logo" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="340dp"
+            android:layout_height="200dp"
+            android:layout_alignTop="@+id/inputCPF"
+            android:layout_centerHorizontal="true"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="387dp">
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/retangulo"
+            android:layout_width="350dp"
+            android:layout_height="260dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/frameLayout"
+            android:layout_marginBottom="48dp"
+            android:contentDescription="@string/rect"
+            app:srcCompat="@drawable/retangulo" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputCPF"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/frameLayout"
+            android:layout_alignTop="@+id/retangulo"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="50dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textCPF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/textCPF" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputSenha"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/frameLayout"
+            android:layout_alignTop="@+id/retangulo"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="96dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/textSenha" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonSenha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/buttonCadastrar"
+            android:layout_alignBottom="@+id/buttonCadastrar"
+            android:layout_alignStart="@+id/inputSenha"
+            android:text="@string/buttonSenha" />
+
+        <Button
+            android:id="@+id/buttonCadastrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/frameLayout"
+            android:layout_below="@+id/buttonEntrar"
+            android:text="@string/buttonCadastrar"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="332dp" />
+
+        <ImageButton
+            android:id="@+id/buttonEntrar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignBottom="@+id/inputSenha"
+            android:layout_alignStart="@+id/buttonCadastrar"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="11dp"
+            android:contentDescription="@string/buttonEntrar"
+            app:srcCompat="@drawable/teste" />
+
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

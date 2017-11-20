@@ -4,23 +4,40 @@
     <string name="textCPF">CPF</string>
     <string name="buttonEntrar">Entrar</string>
     <string name="buttonSenha">Esqueci minha senha</string>
+    <string name="buttonCadastrar">Cadastre-se</string>
     <string name="searchV">Search</string>
     <string name="ok">ok</string>
     <string name="carrinho">Carrinho</string>
     <string name="favoritos">Favoritos</string>
     <string name="box">Voltar para a box</string>
     <string name="novidades">Novidades</string>
-
-
-    <string-array name="dropdownmain">
-        <item></item>
-        <item>Vantagens</item>
-        <item>Rações</item>
-        <item>Mr. Pet</item>
-        <item>Mensagens</item>
-        <item>Configurações</item>
-        <item>Quem Somos</item>
-        <item>Fale Conosco</item>
-        <item>Logout</item>
-    </string-array>
+    <string name="fundosobreposto">Fundo azul sobreposto</string>
+    <string name="logo">logo</string>
+    <string name="rect">retangulo</string>
+    <string name="btnInfoB">info blue</string>
+    <string name="btnInfoG">info green</string>
+    <string name="btnAvalie">Avalie</string>
+    <string name="btnMudar">Mudar tipo de conta</string>
+    <string name="btnTrocar">Alterar animal da conta</string>
+    <string name="btnVitrine">Vai para tela da vitrine</string>
+    <string name="btnMenu">Menu principal</string>
+    <string name="papelMain">Papel de parede da Main</string>
+    <string name="txt_raca">Raça</string>
+    <string name="txt_nome">Nome</string>
+    <string name="txt_kitMes">Kit do mês</string>
+    <string name="txt_novoKit">novo Kit</string>
+    <string name="txt_Conta">PREMIUM</string>
+    <item name="visible" type="id"/>
+    <item name="masked" type="id"/>
+//    <string-array name="dropdownmain">
+//        <item></item>
+//        <item>Vantagens</item>
+//        <item>Rações</item>
+//        <item>Mr. Pet</item>
+//        <item>Mensagens</item>
+//        <item>Configurações</item>
+//        <item>Quem Somos</item>
+//        <item>Fale Conosco</item>
+//        <item>Logout</item>
+//    </string-array>
 </resources>
