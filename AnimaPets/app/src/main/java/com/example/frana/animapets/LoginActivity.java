@@ -1,12 +1,12 @@
 package com.example.frana.animapets;
 
-import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +18,9 @@ public class LoginActivity extends AppCompatActivity {
     private SQL sql;
     private TextView txtCPF;
     private TextView txtSenha;
-    private Button loginB;
+    private ImageView loginB;
+    private Button cadastro;
+    private Button senha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +29,9 @@ public class LoginActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         txtCPF = (TextView) findViewById(R.id.textCPF);
         txtSenha = (TextView) findViewById(R.id.textSenha);
-        loginB = (Button) findViewById(R.id.buttonEntrar);
+        loginB = (ImageView) findViewById(R.id.buttonEntrar);
+        cadastro = (Button) findViewById(R.id.buttonCadastrar);
+        senha= (Button) findViewById(R.id.buttonSenha);
         sql = new SQL(this);
         //createUsers();
 
@@ -36,9 +40,28 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 login();
             }
+
         });
 
+        cadastro.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("https://www.google.com.br"));
+                startActivity(intent);
+            }
+        });
 
+        senha.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("https://www.google.com.br"));
+                startActivity(intent);
+            }
+        });
     }
 
     protected void login() {
@@ -68,9 +91,6 @@ public class LoginActivity extends AppCompatActivity {
         }
 
     }
-
-
-
 
     protected boolean autentication() {
         return false;
