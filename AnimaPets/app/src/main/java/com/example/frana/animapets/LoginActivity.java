@@ -2,6 +2,7 @@ package com.example.frana.animapets;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -33,7 +34,8 @@ public class LoginActivity extends AppCompatActivity {
         cadastro = (Button) findViewById(R.id.buttonCadastrar);
         senha= (Button) findViewById(R.id.buttonSenha);
         sql = new SQL(this);
-        //createUsers();
+        displayData();
+        createUsers();
 
         loginB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,19 +79,17 @@ public class LoginActivity extends AppCompatActivity {
                 System.out.println(enter_user.getCpf().toString());
                 if (enter_user.getCpf().toString().equals(CPF.toString()) && enter_user.getSenha().toString().equals(Senha.toString())) {
                     id.putExtra("user", enter_user.getCodigo());
+                    sharedPreferenceCPF(Senha,CPF);
                     startActivity(id);
-                    Toast.makeText(getApplicationContext(), "user: " + enter_user.getNome().toString(), Toast.LENGTH_LONG);
+                    Toast.makeText(getApplicationContext(), "user: " + enter_user.getNome().toString(), Toast.LENGTH_SHORT);
                     finish();
                     break;
-
                 }
             }catch (Exception e){
                 System.out.println("i: "+i);
                 Toast.makeText(getApplicationContext(),"CPF ou Senha Incorretos",Toast.LENGTH_LONG).show();
             }
-
         }
-
     }
 
     protected boolean autentication() {
@@ -118,5 +118,28 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    public void sharedPreferenceCPF(String senha, String name) {
+        SharedPreferences sharedPreferences = getSharedPreferences("cpf_usuario",Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("userCPF",name);
+        editor.putString("userPassword",senha);
+        System.out.println("Senha: "+txtSenha.getText().toString());
+        editor.apply();
+    }
+
+    public void displayData() {
+        SharedPreferences sharedPreferences = getSharedPreferences("cpf_usuario",Context.MODE_PRIVATE);
+        String name = sharedPreferences.getString("userCPF","");
+        String senha = sharedPreferences.getString("userPassword","");
+        System.out.println("Name: "+name+"   Senha: "+senha);
+
+        if (name != null && senha != null ) {
+            txtCPF.setText(name);
+            txtSenha.setText(senha);
+            if(!name.equals("") && !senha.equals("")) {
+                login();
+            }
+        }
+    }
 
 }

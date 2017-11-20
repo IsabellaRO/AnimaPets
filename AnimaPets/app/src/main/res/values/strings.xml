@@ -29,5 +29,15 @@
     <string name="txt_Conta">PREMIUM</string>
     <item name="visible" type="id"/>
     <item name="masked" type="id"/>
-
+//    <string-array name="dropdownmain">
+//        <item></item>
+//        <item>Vantagens</item>
+//        <item>Rações</item>
+//        <item>Mr. Pet</item>
+//        <item>Mensagens</item>
+//        <item>Configurações</item>
+//        <item>Quem Somos</item>
+//        <item>Fale Conosco</item>
+//        <item>Logout</item>
+//    </string-array>
 </resources>
