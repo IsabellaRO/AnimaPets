@@ -1,5 +1,6 @@
 package com.example.frana.animapets;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.content.SharedPreferences;
@@ -128,7 +129,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void displayData() {
-        SharedPreferences sharedPreferences = getSharedPreferences("cpf_usuario",Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("cpf_usuario", Context.MODE_PRIVATE);
         String name = sharedPreferences.getString("userCPF","");
         String senha = sharedPreferences.getString("userPassword","");
         System.out.println("Name: "+name+"   Senha: "+senha);
