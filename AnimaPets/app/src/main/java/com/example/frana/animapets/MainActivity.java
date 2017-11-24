@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
@@ -20,10 +21,7 @@ public class MainActivity extends AppCompatActivity {
     int lhi;
     SQL sql;
     TextView txt_nome,txt_raca;
-    ImageView imageView;
-    RelativeLayout atualBasket,nextBasket;
-    Button btn_gotoVitrine;
-    Spinner spinner;
+    ImageButton btn_gotoVitrine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,13 +33,17 @@ public class MainActivity extends AppCompatActivity {
         lhi = (int) getIntent().getSerializableExtra("user");
         txt_nome = (TextView) findViewById(R.id.txt_nome);
         txt_raca = (TextView) findViewById(R.id.txt_raca);
-        imageView = (ImageView) findViewById(R.id.imageView);
-        //btn_gotoVitrine = (Button) findViewById(R.id.btn_gotoVitrine);
-        atualBasket = (RelativeLayout) findViewById(R.id.coming_basket);
-        nextBasket = (RelativeLayout) findViewById(R.id.next_basket);
+        btn_gotoVitrine = (ImageButton) findViewById(R.id.btnVitrine);
         User user = sql.selecionarCliente(lhi);
         txt_nome.setText("Ola, "+user.getNome_pet());
         txt_raca.setText(user.getRaca_pet());
+
+        btn_gotoVitrine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToVitrine();
+            }
+        });
     }
 
 

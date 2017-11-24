@@ -20,7 +20,7 @@ public class VitrineActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vitrine2);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView_vitrine1);
-
+        getSupportActionBar().hide();
 
     }
 }
