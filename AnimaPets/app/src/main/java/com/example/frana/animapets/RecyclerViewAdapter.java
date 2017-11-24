@@ -36,7 +36,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         List_vitrine_cards listItem = listItems.get(position);
 
         holder.descText.setText(listItem.getDesc());
-        holder.imageProd.setImageBitmap(listItem.getImage());
+        //holder.imageProd.setImageBitmap(listItem.getImage());
     }
 
     @Override
