@@ -1,6 +1,7 @@
 package com.example.frana.animapets;
 
 import android.media.Image;
+import android.widget.ImageView;
 
 /**
  * Created by frana on 24/11/2017.
@@ -8,10 +9,10 @@ import android.media.Image;
 
 public class List_vitrine_cards {
     private String Desc;
-    private Image image;
+    private int image;
 
 
-    public List_vitrine_cards(String desc, Image image) {
+    public List_vitrine_cards(String desc, int image) {
         Desc = desc;
         this.image = image;
     }
@@ -20,7 +21,7 @@ public class List_vitrine_cards {
         return Desc;
     }
 
-    public Image getImage() {
+    public int getImage() {
         return image;
     }
 }

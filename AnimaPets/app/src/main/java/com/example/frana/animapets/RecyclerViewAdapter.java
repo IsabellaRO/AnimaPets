@@ -27,7 +27,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.vitrine_card_layout,parent,false);
         return new ViewHolder(v);
     }
 
@@ -36,7 +36,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         List_vitrine_cards listItem = listItems.get(position);
 
         holder.descText.setText(listItem.getDesc());
-       // holder.imageProd.setImageBitmap(listItem.getImage());
+        System.out.println("position: "+ position);
+        holder.imageProd.setImageResource(listItem.getImage());
     }
 
     @Override
