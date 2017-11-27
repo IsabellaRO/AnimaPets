@@ -42,10 +42,6 @@ public class RacaoActivity extends AppCompatActivity {
 
     }
     void goToMain(){
-        Intent i = new Intent(getApplicationContext(),MainActivity.class);
-        i.putExtra("user", user.getCodigo());
-
-        startActivity(i);
         finish();
 
     }

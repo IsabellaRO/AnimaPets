@@ -74,83 +74,83 @@ public class VitrineActivity extends AppCompatActivity {
 
         String imageName = "whiskas";
             int resID = getResources().getIdentifier(imageName, "drawable", getPackageName());
-        List_vitrine_cards list_vitrine_cards1 = new List_vitrine_cards("whyskas R$ 52,90  \n" +
+        List_vitrine_cards list_vitrine_cards1 = new List_vitrine_cards("Whyska's \n" +
                 "DESCRIÇÃO:Nam tempor velit consequat,\n" +
                 "maximus ante id, iaculis diam.\n" +
                 "Nam tempor velit consequat,\n" +
-                "maximus ante id, iaculis diam Nam tempor velit c", resID);
+                "maximus ante id, iaculis diam Nam tempor velit c \n \n" + "R$ 52,90", resID);
 
         imageName = "arranhador";
         resID = getResources().getIdentifier(imageName, "drawable", getPackageName());
-        List_vitrine_cards list_vitrine_cards2 = new List_vitrine_cards("arranhador R$87,90\n" +
+        List_vitrine_cards list_vitrine_cards2 = new List_vitrine_cards("Arranhador para Gatos\n" +
                 "Nam tempor velit consequat,\n" +
                 "maximus ante id, iaculis diam.\n" +
                 "Nam tempor velit consequat,\n" +
-                "maximus ante id, iaculis diam", resID);
+                "maximus ante id, iaculis diam \n\n" + "R$87,90", resID);
 
         imageName = "kelddog";
         resID = getResources().getIdentifier(imageName, "drawable", getPackageName());
-        List_vitrine_cards list_vitrine_cards3 = new List_vitrine_cards("keldog R$22,90\n" +
+        List_vitrine_cards list_vitrine_cards3 = new List_vitrine_cards("Keld Dog\n" +
                 "DESCRIÇÃO :Nam tempor velit consequat,\n" +
                 "maximus ante id, iaculis diam.\n" +
                 "Nam tempor velit consequat,\n" +
-                "maximus ante id, iaculis diam\n", resID);
+                "maximus ante id, iaculis diam\n\n" + "R$22,90", resID);
 
         imageName = "pelucia_caes";
         resID = getResources().getIdentifier(imageName, "drawable", getPackageName());
-        List_vitrine_cards list_vitrine_cards4 = new List_vitrine_cards("Pelucia caes 19,90  \n" +
+        List_vitrine_cards list_vitrine_cards4 = new List_vitrine_cards("Cães de Pelucia\n" +
                 "DESCRIÇÃO :Nam tempor velit consequat,\n" +
                 "maximus ante id, iaculis diam.\n" +
                 "Nam tempor velit consequat,\n" +
-                "maximus ante id, iaculis diam", resID);
+                "maximus ante id, iaculis diam\n\n"+"R$19,90", resID);
 
         imageName = "comedouro_de_inox";
         resID = getResources().getIdentifier(imageName, "drawable", getPackageName());
-        List_vitrine_cards list_vitrine_cards5 = new List_vitrine_cards("comedouro_de_inox 11,90\n" +
+        List_vitrine_cards list_vitrine_cards5 = new List_vitrine_cards("Comedouro de Inox \n" +
                 "DESCRIÇÃO :Nam tempor velit consequat,\n" +
                 "maximus ante id, iaculis diam.\n" +
                 "Nam tempor velit consequat,\n" +
-                "maximus ante id, iaculis diam", resID);
+                "maximus ante id, iaculis diam\n\n"+"R$11,90", resID);
 
         imageName = "comedouroebebedouro";
         resID = getResources().getIdentifier(imageName, "drawable", getPackageName());
-        List_vitrine_cards list_vitrine_cards6 = new List_vitrine_cards("comedouro e bebedouro dual 119,90\n" +
+        List_vitrine_cards list_vitrine_cards6 = new List_vitrine_cards("cComedouro e Bebedouro Dual \n" +
                 "DESCRIÇÃO :Nam tempor velit consequat,\n" +
                 "maximus ante id, iaculis diam.\n" +
                 "Nam tempor velit consequat,\n" +
-                "maximus ante id, iaculis diam", resID);
+                "maximus ante id, iaculis diam\n\n" + "R$119,90", resID);
 
         imageName = "coleira_anti_pulgas";
         resID = getResources().getIdentifier(imageName, "drawable", getPackageName());
-        List_vitrine_cards list_vitrine_cards7 = new List_vitrine_cards("coleira_anti_pulgas R$149,00\n" +
+        List_vitrine_cards list_vitrine_cards7 = new List_vitrine_cards("Coleira Anti-Pulgas \n" +
                 "DESCRIÇÃO :Nam tempor velit consequat,\n" +
                 "maximus ante id, iaculis diam.\n" +
                 "Nam tempor velit consequat,\n" +
-                "maximus ante id, iaculis diam", resID);
+                "maximus ante id, iaculis diam\n\n"+"R$149,00", resID);
 
         imageName = "perfume_femeas";
         resID = getResources().getIdentifier(imageName, "drawable", getPackageName());
-        List_vitrine_cards list_vitrine_cards8 = new List_vitrine_cards("perfume pet femea 10,71\n" +
+        List_vitrine_cards list_vitrine_cards8 = new List_vitrine_cards("Perfume Cachorro Fêmea \n" +
                 "DESCRIÇÃO :Nam tempor velit consequat,\n" +
                 "maximus ante id, iaculis diam.\n" +
                 "Nam tempor velit consequat,\n" +
-                "maximus ante id, iaculis diam\n", resID);
+                "maximus ante id, iaculis diam\n\n" + "R$10,71", resID);
 
         imageName = "shampoo_neutro";
         resID = getResources().getIdentifier(imageName, "drawable", getPackageName());
-        List_vitrine_cards list_vitrine_cards9 = new List_vitrine_cards("shampoo pet neutro R$ 38,61\n" +
+        List_vitrine_cards list_vitrine_cards9 = new List_vitrine_cards("Shampoo Pet Neutro R$ 38,61\n" +
                 "DESCRIÇÃO :Nam tempor velit consequat,\n" +
                 "maximus ante id, iaculis diam.\n" +
                 "Nam tempor velit consequat,\n" +
-                "maximus ante id, iaculis diam", resID);
+                "maximus ante id, iaculis diam\n\n"+"R$10,71", resID);
 
         imageName = "luvas";
         resID = getResources().getIdentifier(imageName, "drawable", getPackageName());
-        List_vitrine_cards list_vitrine_cards10 = new List_vitrine_cards("luvas R$12,90\n" +
+        List_vitrine_cards list_vitrine_cards10 = new List_vitrine_cards("Luvas Magnéticas \n" +
                 "DESCRIÇÃO : Nam tempor velit consequat,\n" +
                 "maximus ante id, iaculis diam.\n" +
                 "Nam tempor velit consequat,\n" +
-                "maximus ante id, iaculis diam. ", resID);
+                "maximus ante id, iaculis diam. \n\n"+"R$12,90", resID);
 
         list_vitrine_cardsa.add(list_vitrine_cards1);
         list_vitrine_cardsa.add(list_vitrine_cards2);
