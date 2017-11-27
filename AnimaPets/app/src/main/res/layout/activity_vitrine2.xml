@@ -54,7 +54,7 @@
                 android:contentDescription="@string/favoritos"
                 app:srcCompat="@drawable/favoritos" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/carrinho_btn_vitrine"
                 android:layout_width="35dp"
                 android:layout_height="83dp"

@@ -1,10 +1,15 @@
 package com.example.frana.animapets;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +24,7 @@ public class VitrineActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerViewAdapter adapter;
     private List<List_vitrine_cards> list_vitrine_cards;
+    private ImageButton fav_btn,carrinho_btn,novidades_btn;
 
 
     @Override
@@ -33,6 +39,31 @@ public class VitrineActivity extends AppCompatActivity {
         list_vitrine_cards = setList_vitrine_cards();
         adapter = new RecyclerViewAdapter(list_vitrine_cards,this);
         recyclerView.setAdapter(adapter);
+        fav_btn = (ImageButton) findViewById(R.id.fav_btn_vitrine);
+        carrinho_btn = (ImageButton) findViewById(R.id.carrinho_btn_vitrine);
+        novidades_btn = (ImageButton) findViewById(R.id.novidades_btn_vitrine);
+
+
+
+
+        fav_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTonImp();
+            }
+        });
+        carrinho_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTonImp();
+            }
+        });
+        novidades_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTonImp();
+            }
+        });
 
 
     }
@@ -133,6 +164,10 @@ public class VitrineActivity extends AppCompatActivity {
         list_vitrine_cardsa.add(list_vitrine_cards10);
 
         return list_vitrine_cardsa;
+    }
+    void goTonImp(){
+        Intent i = new Intent(getApplicationContext(),N_implementada.class);
+        startActivity(i);
     }
 
 }
