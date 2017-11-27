@@ -2,49 +2,46 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="350dp"
-    android:layout_height="match_parent"
-    android:layout_marginEnd="500dp"
-    tools:layout_editor_absoluteY="81dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/fundo"
-        android:layout_width="365dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:contentDescription="@string/fundo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fundoo" />
+        app:srcCompat="@drawable/fundooo" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="0dp"
-        android:layout_height="124dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginStart="6dp"
+        android:layout_height="141dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout4"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <SearchView
             android:id="@+id/search_txt_vitrine"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="58dp">
 
         </SearchView>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="92dp"
             android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/all_vitrine_btn"
                 android:layout_width="35dp"
-                android:layout_height="70dp"
+                android:layout_height="83dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/compras"
                 app:srcCompat="@drawable/compras" />
@@ -52,15 +49,15 @@
             <ImageButton
                 android:id="@+id/fav_btn_vitrine"
                 android:layout_width="35dp"
-                android:layout_height="70dp"
+                android:layout_height="83dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/favoritos"
                 app:srcCompat="@drawable/favoritos" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/carrinho_btn_vitrine"
                 android:layout_width="35dp"
-                android:layout_height="70dp"
+                android:layout_height="83dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/carrinho"
                 app:srcCompat="@drawable/carrinho" />
@@ -68,24 +65,23 @@
             <ImageButton
                 android:id="@+id/novidades_btn_vitrine"
                 android:layout_width="75dp"
-                android:layout_height="70dp"
+                android:layout_height="83dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/novidades"
                 app:srcCompat="@drawable/novidades" />
+
         </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout4"
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginStart="10dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/fundo"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <android.support.v7.widget.RecyclerView

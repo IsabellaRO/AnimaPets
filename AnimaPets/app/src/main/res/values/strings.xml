@@ -43,18 +43,24 @@
     <string name="carrinho">Carrinho</string>
     <string name="favoritos">Favoritos</string>
     <string name="novidades">Novidades</string>
+    <string name="box"> Volta para a box</string>
+    <string name="vazia">Página não implementada</string>
 
     <item name="visible" type="id"/>
     <item name="masked" type="id"/>
-//    <string-array name="dropdownmain">
-//        <item></item>
-//        <item>Vantagens</item>
-//        <item>Rações</item>
-//        <item>Mr. Pet</item>
-//        <item>Mensagens</item>
-//        <item>Configurações</item>
-//        <item>Quem Somos</item>
-//        <item>Fale Conosco</item>
-//        <item>Logout</item>
-//    </string-array>
+
+
+    <string name="country_prompt">Menu</string>
+    <string-array name="dropdownmain">
+
+        <item></item>
+        <item>Vantagens</item>
+        <item>Rações</item>
+        <item>Mr. Pet</item>
+        <item>Mensagens</item>
+        <item>Configurações</item>
+        <item>Quem Somos</item>
+        <item>Fale Conosco</item>
+        <item>Logout</item>
+    </string-array>
 </resources>
