@@ -52,7 +52,6 @@
 
     <string name="country_prompt">Menu</string>
     <string-array name="dropdownmain">
-
         <item></item>
         <item>Vantagens</item>
         <item>Rações</item>

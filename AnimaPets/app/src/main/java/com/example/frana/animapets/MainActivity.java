@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
     SQL sql;
     User user;
     TextView txt_nome,txt_raca;
-    ImageButton btn_gotoVitrine,menu;
+    ImageButton btn_gotoVitrine;
+    Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,18 +33,42 @@ public class MainActivity extends AppCompatActivity {
         user = sql.selecionarCliente(lhi);
         txt_nome.setText("Ola, "+user.getNome_pet());
         txt_raca.setText(user.getRaca_pet());
-        menu = (ImageButton) findViewById(R.id.btnMenu);
+        spinner = (Spinner) findViewById(R.id.spin_men);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) {
+
+                }
+                else if (position == 2) {
+                    goToRacao();
+                }
+                else if (position == 8) {
+                    SharedPreferences sharedPreferences = getSharedPreferences("cpf_usuario",Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("userCPF","");
+                    editor.putString("userPassword","");
+                    editor.apply();
+                    finish();
+                    Intent i = new Intent(getApplicationContext(),LoginActivity.class);
+                    startActivity(i);
+                }else{
+                    nImplement();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
 
         btn_gotoVitrine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goToVitrine();
-            }
-        });
-        menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goToRacao();
             }
         });
 
