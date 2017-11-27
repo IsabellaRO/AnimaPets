@@ -2,97 +2,106 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="350dp"
     android:layout_height="match_parent"
+    android:layout_marginEnd="500dp"
     tools:layout_editor_absoluteY="81dp">
 
-    <LinearLayout
-        android:id="@+id/upBox"
-        android:layout_width="0dp"
+    <ImageView
+        android:id="@+id/fundo"
+        android:layout_width="365dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:contentDescription="@string/fundo"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fundoo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="124dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginStart="6dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout4"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/search_linear_layout"
+        <SearchView
+            android:id="@+id/search_txt_vitrine"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/search_txt_vitrine"
-                android:layout_width="254dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="O que deseja procurar?"
-                android:inputType="text" />
-
-            <Button
-                android:id="@+id/button_search_vitrine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Search" />
-
-        </LinearLayout>
+        </SearchView>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
+            <ImageButton
                 android:id="@+id/all_vitrine_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="35dp"
+                android:layout_height="70dp"
                 android:layout_weight="1"
-                android:text="All" />
+                android:contentDescription="@string/compras"
+                app:srcCompat="@drawable/compras" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/fav_btn_vitrine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="35dp"
+                android:layout_height="70dp"
                 android:layout_weight="1"
-                android:text="Favoritos" />
+                android:contentDescription="@string/favoritos"
+                app:srcCompat="@drawable/favoritos" />
 
-            <Button
+            <ImageView
                 android:id="@+id/carrinho_btn_vitrine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="35dp"
+                android:layout_height="70dp"
                 android:layout_weight="1"
-                android:text="Carrinho" />
+                android:contentDescription="@string/carrinho"
+                app:srcCompat="@drawable/carrinho" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/novidades_btn_vitrine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="75dp"
+                android:layout_height="70dp"
                 android:layout_weight="1"
-                android:text="Novidades"
-                android:textSize="11sp" />
-
+                android:contentDescription="@string/novidades"
+                app:srcCompat="@drawable/novidades" />
         </LinearLayout>
 
     </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView_vitrine1"
+    <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="0dp"
-        android:layout_height="371dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.846" />
+        app:layout_constraintStart_toStartOf="@+id/fundo"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_vitrine1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.846" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

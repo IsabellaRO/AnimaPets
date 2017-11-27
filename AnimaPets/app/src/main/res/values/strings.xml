@@ -7,11 +7,7 @@
     <string name="buttonCadastrar">Cadastre-se</string>
     <string name="searchV">Search</string>
     <string name="ok">ok</string>
-    <string name="carrinho">Carrinho</string>
-    <string name="favoritos">Favoritos</string>
-    <string name="box">Voltar para a box</string>
-    <string name="novidades">Novidades</string>
-    <string name="fundosobreposto">Fundo azul sobreposto</string>
+    <string name="fundosobreposto">Fundo sobreposto</string>
     <string name="logo">logo</string>
     <string name="rect">retangulo</string>
     <string name="btnInfoB">info blue</string>
@@ -27,6 +23,27 @@
     <string name="txt_kitMes">Kit do mês</string>
     <string name="txt_novoKit">novo Kit</string>
     <string name="txt_Conta">PREMIUM</string>
+    <string name="retangulos">Retangulos coloridos</string>
+    <string name="titleracao">Ração</string>
+    <string name="home">Vai para box</string>
+    <string name="troque">Troque de ração de forma rápida e fácil. Só clicar*</string>
+    <string name="txt_idade">Idade</string>
+    <string name="escolha">Escolha sua ração</string>
+    <string name="txt_racaoAtual">Dados sobre a ração atual</string>
+    <string name="txt_outraRacao">Dados sobre outra ração</string>
+    <string name="btn_infoY">Info nutricional outra ração</string>
+    <string name="btn_infoG">Info nutricional ração atual</string>
+    <string name="btn_infoB">Info troca de ração</string>
+    <string name="btn_alterar">Alterar ração</string>
+    <string name="btn_cancelar">Cancelar</string>
+    <string name="btn_visualizar">Visualizar</string>
+    <string name="sombra">Desaparece ao clicar em visualizar</string>
+    <string name="fundo">Fundo</string>
+    <string name="compras">compras</string>
+    <string name="carrinho">Carrinho</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="novidades">Novidades</string>
+
     <item name="visible" type="id"/>
     <item name="masked" type="id"/>
 //    <string-array name="dropdownmain">
