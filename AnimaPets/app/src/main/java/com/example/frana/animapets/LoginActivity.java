@@ -126,6 +126,8 @@ public class LoginActivity extends AppCompatActivity {
         editor.putString("userPassword",senha);
         System.out.println("Senha: "+txtSenha.getText().toString());
         editor.apply();
+        Intent i  = new Intent(getApplicationContext(),LoginActivity.class);
+        startActivity(i);
     }
 
     public void displayData() {
