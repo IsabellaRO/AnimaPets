@@ -43,6 +43,8 @@
     <string name="carrinho">Carrinho</string>
     <string name="favoritos">Favoritos</string>
     <string name="novidades">Novidades</string>
+    <string name="box"> Volta para a box</string>
+    <string name="vazia">Página não implementada</string>
 
     <item name="visible" type="id"/>
     <item name="masked" type="id"/>
