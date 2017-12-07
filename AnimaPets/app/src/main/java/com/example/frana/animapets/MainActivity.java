@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         String imageName = "perfil"+user.getImagem_de_perfil().toString();
         int resID = getResources().getIdentifier(imageName, "drawable", getPackageName());
         perfilImagem.setImageResource(resID);
+        Global.qual_rac = 0;
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

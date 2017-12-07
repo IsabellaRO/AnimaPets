@@ -1,6 +1,7 @@
 package com.example.frana.animapets;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -16,21 +17,15 @@ import android.widget.ImageView;
 public class PopUp extends Activity {
 
     ImageButton changebtn, cancelbtn;
-    ImageView dogChow1,dogChow2,pedigree1,pedigree2;
+    int lhi;
+    User user;
+    SQL sql;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.popup_layout);
-        getSupportActionBar().hide();
-        changebtn = (ImageButton) findViewById(R.id.changebtn);
-        cancelbtn = (ImageButton) findViewById(R.id.cancelbtn);
-        dogChow1 = (ImageView) findViewById(R.id.dogchow1);
-        dogChow2 = (ImageView) findViewById(R.id.dogchow2);
-        pedigree1 = (ImageView) findViewById(R.id.pedigree1);
-        pedigree2 = (ImageView) findViewById(R.id.pedigree2);
-
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
 
@@ -38,36 +33,40 @@ public class PopUp extends Activity {
         int height = dm.heightPixels;
 
         getWindow().setLayout((int) (width * 0.8), (int) (height * 0.6));
+        changebtn = (ImageButton) findViewById(R.id.changebtn);
+        cancelbtn = (ImageButton) findViewById(R.id.cancelbtn);
+        sql = new SQL(this);
+        lhi = (int) getIntent().getSerializableExtra("user");
+        user = sql.selecionarCliente(lhi);
+
+        changebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Global.qual_rac== 0) {
+                    Global.qual_rac = 1;
+                }
+                else{
+                    Global.qual_rac = 0;
+                }
+                Intent i = new Intent(getApplicationContext(),RacaoActivity.class);
+                i.putExtra("user", user.getCodigo());
+                startActivity(i);
+                finish();
+            }
+        });
+        cancelbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
     }
 
-    changebtn.OnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            changeRac();
-        }
-    });
 
-    cancelbtn.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v){
-        goToRacao();
-        }
-    });
 
-    void changeRac() {
-        if (pedigree1.getVisibility() == View.INVISIBLE) {
-            pedigree1.setVisibility(View.VISIBLE);
-            pedigree2.setVisibility(View.INVISIBLE);
-            dogChow2.setVisibility(View.VISIBLE);
-            dogChow1.setVisibility(View.INVISIBLE);
-        }
-        else {
-            pedigree2.setVisibility(View.VISIBLE);
-            pedigree1.setVisibility(View.INVISIBLE);
-            dogChow1.setVisibility(View.VISIBLE);
-            dogChow2.setVisibility(View.INVISIBLE);
-        }
-    }
+
 
     void goToRacao(){
         finish();
