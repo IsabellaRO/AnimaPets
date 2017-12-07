@@ -42,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if (position == 2) {
                     goToRacao();
+                    spinner.setSelection(0);
+
+                }
+                else if (position == 3) {
+                    startActivity(new Intent(MainActivity.this,PopUp.class));
+                    spinner.setSelection(0);
                 }
                 else if (position == 8) {
                     SharedPreferences sharedPreferences = getSharedPreferences("cpf_usuario",Context.MODE_PRIVATE);
@@ -52,8 +58,12 @@ public class MainActivity extends AppCompatActivity {
                     finish();
                     Intent i = new Intent(getApplicationContext(),LoginActivity.class);
                     startActivity(i);
+                    spinner.setSelection(0);
+
                 }else{
                     nImplement();
+                    spinner.setSelection(0);
+
                 }
             }
 
