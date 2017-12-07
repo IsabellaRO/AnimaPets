@@ -17,7 +17,7 @@ public class RacaoActivity extends AppCompatActivity {
     SQL sql;
     TextView txt_nome, txt_raca;
     ImageButton menu_btn,btn_visualizar,alterar;
-    ImageView sombra;
+    ImageView sombra,dogChow1,dogChow2,pedigree1,pedigree2;
     User user;
 
     @Override
@@ -33,6 +33,10 @@ public class RacaoActivity extends AppCompatActivity {
         btn_visualizar = (ImageButton) findViewById(R.id.btn_visualizar);
         alterar = (ImageButton) findViewById(R.id.btn_alterar);
         sombra = (ImageView) findViewById(R.id.sombra);
+        dogChow1 = (ImageView) findViewById(R.id.dogchow1);
+        dogChow2 = (ImageView) findViewById(R.id.dogchow2);
+        pedigree1 = (ImageView) findViewById(R.id.pedigree1);
+        pedigree2 = (ImageView) findViewById(R.id.pedigree2);
         user = sql.selecionarCliente(lhi);
         txt_nome.setText("Ola, " + user.getNome_pet());
         txt_raca.setText(user.getRaca_pet());
@@ -41,6 +45,7 @@ public class RacaoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),PopUp.class));
+                changeRac();
             }
         });
 
@@ -62,6 +67,23 @@ public class RacaoActivity extends AppCompatActivity {
     }
     void goToMain(){
         finish();
+
+    }
+
+    void changeRac() {
+        if (pedigree1.getVisibility() == View.INVISIBLE) {
+            pedigree1.setVisibility(View.VISIBLE);
+            pedigree2.setVisibility(View.INVISIBLE);
+            dogChow2.setVisibility(View.VISIBLE);
+            dogChow1.setVisibility(View.INVISIBLE);
+        }
+        else {
+            pedigree2.setVisibility(View.VISIBLE);
+            pedigree1.setVisibility(View.INVISIBLE);
+            dogChow1.setVisibility(View.VISIBLE);
+            dogChow2.setVisibility(View.INVISIBLE);
+        }
+
 
     }
 }
