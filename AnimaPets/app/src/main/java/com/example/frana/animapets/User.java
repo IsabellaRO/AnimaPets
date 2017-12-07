@@ -7,7 +7,7 @@ package com.example.frana.animapets;
 public class User {
 
     public User(String nome, String endereco, int numero_end, String complemento, String cep, String cidade, String estado, String telefone, String celular, String email, String cpf, String nome_pet, String apelido_pet,
-                String nascimento_pet, String peso_pet, String raca_pet, String porte_pet, String senha) {
+                String nascimento_pet, String peso_pet, String raca_pet, String porte_pet, String senha, String imagem_de_perfil) {
         this.nome = nome;
         this.endereco = endereco;
         this.numero_end = numero_end;
@@ -26,10 +26,11 @@ public class User {
         this.raca_pet = raca_pet;
         this.porte_pet = porte_pet;
         this.senha = senha;
+        this.imagem_de_perfil = imagem_de_perfil;
     }
 
     public User(int codigo, String nome, String endereco, int numero_end, String complemento, String cep, String cidade, String estado, String telefone, String celular, String email, String cpf, String nome_pet, String apelido_pet,
-                String nascimento_pet, String peso_pet, String raca_pet, String porte_pet, String senha) {
+                String nascimento_pet, String peso_pet, String raca_pet, String porte_pet, String senha, String imagem_de_perfil) {
         this.codigo = codigo;
         this.nome = nome;
         this.endereco = endereco;
@@ -49,6 +50,7 @@ public class User {
         this.raca_pet = raca_pet;
         this.porte_pet = porte_pet;
         this.senha = senha;
+        this.imagem_de_perfil = imagem_de_perfil;
     }
     private int codigo;
     private String nome;
@@ -69,6 +71,7 @@ public class User {
     private String raca_pet;
     private String porte_pet;
     private String senha;
+    private String imagem_de_perfil;
 
     public String getNome() {
         return nome;
@@ -220,5 +223,13 @@ public class User {
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
+    }
+
+    public String getImagem_de_perfil() {
+        return imagem_de_perfil;
+    }
+
+    public void setImagem_de_perfil(String imagem_de_perfil) {
+        this.imagem_de_perfil = imagem_de_perfil;
     }
 }

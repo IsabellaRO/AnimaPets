@@ -37,6 +37,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         holder.descText.setText(listItem.getDesc());
         System.out.println("position: "+ position);
+        
+
         holder.imageProd.setImageResource(listItem.getImage());
     }
 

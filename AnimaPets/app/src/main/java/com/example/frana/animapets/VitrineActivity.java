@@ -42,8 +42,9 @@ public class VitrineActivity extends AppCompatActivity {
         fav_btn = (ImageButton) findViewById(R.id.fav_btn_vitrine);
         carrinho_btn = (ImageButton) findViewById(R.id.carrinho_btn_vitrine);
         novidades_btn = (ImageButton) findViewById(R.id.novidades_btn_vitrine);
-
-
+        recyclerView.setItemViewCacheSize(50);
+        recyclerView.setDrawingCacheEnabled(true);
+        recyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_AUTO);
 
 
         fav_btn.setOnClickListener(new View.OnClickListener() {

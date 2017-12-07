@@ -36,6 +36,7 @@ public class SQL extends SQLiteOpenHelper {
     private static final String RACA_PET_CLIENTE = "raca_pet";
     private static final String PORTE_PET_CLIENTE = "porte_pet";
     private static final String SENHA_CLIENTE = "senha";
+    private static final String IMAGEM_PERFIL = "perfil";
 
 
     public SQL(Context context) {
@@ -52,7 +53,7 @@ public class SQL extends SQLiteOpenHelper {
                 + TELEFONE_CLIENTE + " TEXT, " + CELULAR_CLIENTE + " TEXT, " +EMAIL_CLIENTE + " TEXT, " + CPF_CLIENTE + " TEXT, "
                 + NOME_PET_CLIENTE + " TEXT, " + APELIDO_PET_CLIENTE + " TEXT, " + NASCIMENTO_PET_CLIENTE + " TEXT, "
                 + PESO_PET_CLIENTE + " TEXT, " + RACA_PET_CLIENTE + " TEXT, " + PORTE_PET_CLIENTE + " TEXT, "
-                + SENHA_CLIENTE + " TEXT)";
+                + SENHA_CLIENTE +  " TEXT, " + IMAGEM_PERFIL + " TEXT)";
 
         db.execSQL(QUERY_COLUNA);
 
@@ -83,6 +84,7 @@ public class SQL extends SQLiteOpenHelper {
         values.put(RACA_PET_CLIENTE, String.valueOf(user.getRaca_pet()));
         values.put(PORTE_PET_CLIENTE, String.valueOf(user.getPorte_pet()));
         values.put(SENHA_CLIENTE, String.valueOf(user.getSenha()));
+        values.put(IMAGEM_PERFIL, String.valueOf(user.getImagem_de_perfil()));
 
         db.insert(TABELA_CLIENTE, null, values);
         db.close();
@@ -99,21 +101,13 @@ public class SQL extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.query(TABELA_CLIENTE, new String[]{CODIGO_CLIENTE, NOME_CLIENTE, ENDERECO_CLIENTE, NUMERO_END_CLIENTE, COMPLEMENTO, CEP_CLIENTE, CIDADE_CLIENTE, ESTADO_CLIENTE, TELEFONE_CLIENTE,
-        CELULAR_CLIENTE, EMAIL_CLIENTE, CPF_CLIENTE, NOME_PET_CLIENTE, APELIDO_PET_CLIENTE, NASCIMENTO_PET_CLIENTE,PESO_PET_CLIENTE, RACA_PET_CLIENTE, PORTE_PET_CLIENTE,SENHA_CLIENTE}, CODIGO_CLIENTE + " = ?", new String[]{String.valueOf(codigo)}, null, null, null, null);
+        CELULAR_CLIENTE, EMAIL_CLIENTE, CPF_CLIENTE, NOME_PET_CLIENTE, APELIDO_PET_CLIENTE, NASCIMENTO_PET_CLIENTE,PESO_PET_CLIENTE, RACA_PET_CLIENTE, PORTE_PET_CLIENTE,SENHA_CLIENTE,IMAGEM_PERFIL}, CODIGO_CLIENTE + " = ?", new String[]{String.valueOf(codigo)}, null, null, null, null);
         if (cursor != null) {
             cursor.moveToFirst();
         }
         //int codigo, String nome, String endereco2, int numero_end3, String complemento4, int cep5, String cidade6, String estado7, int telefone8, int celular9, String email10, int cpf11, String nome_pet12, String apelido_pet13,
         //      String nascimento_pet14, int peso_pet15, String raca_pet16, String pote_pet17, String senha18
-        return new User(Integer.parseInt(cursor.getString(0)), cursor.getString(1), cursor.getString(2), Integer.parseInt(cursor.getString(3)), cursor.getString(4), cursor.getString(5), cursor.getString(6), cursor.getString(7), cursor.getString(8), cursor.getString(9), cursor.getString(10), cursor.getString(11), cursor.getString(12), cursor.getString(13), cursor.getString(14), cursor.getString(15), cursor.getString(16), cursor.getColumnName(17),cursor.getString(18));
+        return new User(Integer.parseInt(cursor.getString(0)), cursor.getString(1), cursor.getString(2), Integer.parseInt(cursor.getString(3)), cursor.getString(4), cursor.getString(5), cursor.getString(6), cursor.getString(7), cursor.getString(8), cursor.getString(9), cursor.getString(10), cursor.getString(11), cursor.getString(12), cursor.getString(13), cursor.getString(14), cursor.getString(15), cursor.getString(16), cursor.getColumnName(17),cursor.getString(18),cursor.getString(19));
     }
 }
-
-
-/*  classe.setStrenght();
-        classe.setIntelligence();
-                classe.setWisdom();
-                classe.setDexterity();
-                classe.setConstitution();
-                classe.setCharisma();*/
 
