@@ -46,6 +46,8 @@
                 <category android:name="android.intent.category.ALTERNATIVE"/>
             </intent-filter>
         </activity>
+        <activity android:name=".PopUp"
+            android:theme="@style/AppTheme.CustomTheme"></activity>
     </application>
 
 </manifest>
