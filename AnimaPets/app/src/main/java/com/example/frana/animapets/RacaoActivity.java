@@ -20,7 +20,7 @@ public class RacaoActivity extends AppCompatActivity {
     int lhi;
     SQL sql;
     TextView txt_nome, txt_raca;
-    ImageButton menu_btn,btn_visualizar,alterar,changebtn,cancelbtn;
+    ImageButton menu_btn,btn_visualizar,alterar,changebtn,cancelbtn, cancelar;
     ImageView sombra,perfill;
     ImageView dogChow1,dogChow2,pedigree1,pedigree2;
     User user;
@@ -38,6 +38,7 @@ public class RacaoActivity extends AppCompatActivity {
         menu_btn = (ImageButton) findViewById(R.id.btnHome);
         btn_visualizar = (ImageButton) findViewById(R.id.btn_visualizar);
         alterar = (ImageButton) findViewById(R.id.btn_alterar);
+        cancelar = (ImageButton) findViewById(R.id.btn_cancelar);
         sombra = (ImageView) findViewById(R.id.sombra);
         perfill = (ImageView) findViewById(R.id.perfilImageRac);
         user = sql.selecionarCliente(lhi);
@@ -75,6 +76,14 @@ public class RacaoActivity extends AppCompatActivity {
                 btn_visualizar.setVisibility(View.INVISIBLE);
             }
         });
+
+        cancelar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    sombra.setVisibility(View.VISIBLE);
+                    btn_visualizar.setVisibility(View.VISIBLE);
+                }
+            });
 
 
     }
@@ -133,5 +142,6 @@ public class RacaoActivity extends AppCompatActivity {
         });
         MyDialog.show();
     }
+
 
 }
