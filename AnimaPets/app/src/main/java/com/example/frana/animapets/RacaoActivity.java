@@ -16,7 +16,7 @@ public class RacaoActivity extends AppCompatActivity {
     int lhi;
     SQL sql;
     TextView txt_nome, txt_raca;
-    ImageButton menu_btn,btn_visualizar;
+    ImageButton menu_btn,btn_visualizar,alterar;
     ImageView sombra;
     User user;
 
@@ -31,10 +31,18 @@ public class RacaoActivity extends AppCompatActivity {
         txt_raca = (TextView) findViewById(R.id.txt_raca);
         menu_btn = (ImageButton) findViewById(R.id.btnHome);
         btn_visualizar = (ImageButton) findViewById(R.id.btn_visualizar);
+        alterar = (ImageButton) findViewById(R.id.btn_alterar);
         sombra = (ImageView) findViewById(R.id.sombra);
         user = sql.selecionarCliente(lhi);
         txt_nome.setText("Ola, " + user.getNome_pet());
         txt_raca.setText(user.getRaca_pet());
+
+        alterar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),PopUp.class));
+            }
+        });
 
         menu_btn.setOnClickListener(new View.OnClickListener() {
             @Override

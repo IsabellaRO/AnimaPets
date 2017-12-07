@@ -45,10 +45,7 @@ public class MainActivity extends AppCompatActivity {
                     spinner.setSelection(0);
 
                 }
-                else if (position == 3) {
-                    startActivity(new Intent(MainActivity.this,PopUp.class));
-                    spinner.setSelection(0);
-                }
+
                 else if (position == 8) {
                     SharedPreferences sharedPreferences = getSharedPreferences("cpf_usuario",Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
