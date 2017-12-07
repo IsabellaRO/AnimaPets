@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     User user;
     TextView txt_nome,txt_raca;
     ImageButton btn_gotoVitrine;
+    ImageView perfilImagem;
     Spinner spinner;
 
     @Override
@@ -30,10 +32,13 @@ public class MainActivity extends AppCompatActivity {
         txt_raca = (TextView) findViewById(R.id.txt_raca);
         btn_gotoVitrine = (ImageButton) findViewById(R.id.btnVitrine);
         user = sql.selecionarCliente(lhi);
+        perfilImagem = (ImageView) findViewById(R.id.perfilImage);
         txt_nome.setText("Ola, "+user.getNome_pet());
         txt_raca.setText(user.getRaca_pet());
         spinner = (Spinner) findViewById(R.id.spin_men);
-
+        String imageName = "perfil"+user.getImagem_de_perfil().toString();
+        int resID = getResources().getIdentifier(imageName, "drawable", getPackageName());
+        perfilImagem.setImageResource(resID);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
