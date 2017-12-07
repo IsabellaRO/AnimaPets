@@ -51,6 +51,9 @@
     <string name="pedigree2">Pedigree embaixo</string>
     <string name="dogchow1">DogChow em cima</string>
     <string name="dogchow2">DogChow embaixo</string>
+    <string name="paredepopup">Papel de parede e mensagem do pop up</string>
+    <string name="cancelbtn">Botão cancelar alteração de ração</string>
+    <string name="changebtn">Botão confirmar alteraração de ração</string>
 
     <item name="visible" type="id"/>
     <item name="masked" type="id"/>
