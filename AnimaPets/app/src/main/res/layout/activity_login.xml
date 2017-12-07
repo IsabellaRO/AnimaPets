@@ -122,10 +122,10 @@
             android:layout_height="80dp"
             android:layout_alignBottom="@+id/inputSenha"
             android:layout_alignStart="@+id/buttonCadastrar"
-            android:layout_marginBottom="8dp"
-            android:layout_marginStart="11dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="15dp"
             android:contentDescription="@string/buttonEntrar"
-            app:srcCompat="@drawable/teste" />
+            app:srcCompat="@drawable/go" />
 
 
     </RelativeLayout>
