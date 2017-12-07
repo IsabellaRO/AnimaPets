@@ -80,12 +80,16 @@ public class RacaoActivity extends AppCompatActivity {
             pedigree2.setVisibility(View.INVISIBLE);
             dogChow2.setVisibility(View.VISIBLE);
             dogChow1.setVisibility(View.INVISIBLE);
+            sombra.setVisibility(View.VISIBLE);
+            btn_visualizar.setVisibility(View.VISIBLE);
         }
         else {
             pedigree2.setVisibility(View.VISIBLE);
             pedigree1.setVisibility(View.INVISIBLE);
             dogChow1.setVisibility(View.VISIBLE);
             dogChow2.setVisibility(View.INVISIBLE);
+            sombra.setVisibility(View.VISIBLE);
+            btn_visualizar.setVisibility(View.VISIBLE);
         }
 
 
