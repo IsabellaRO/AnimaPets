@@ -17,7 +17,7 @@ public class RacaoActivity extends AppCompatActivity {
     SQL sql;
     TextView txt_nome, txt_raca;
     ImageButton menu_btn,btn_visualizar,alterar;
-    ImageView sombra,dogChow1,dogChow2,pedigree1,pedigree2;
+    ImageView sombra,dogChow1,dogChow2,pedigree1,pedigree2,perfill;
     User user;
 
     @Override
@@ -33,6 +33,7 @@ public class RacaoActivity extends AppCompatActivity {
         btn_visualizar = (ImageButton) findViewById(R.id.btn_visualizar);
         alterar = (ImageButton) findViewById(R.id.btn_alterar);
         sombra = (ImageView) findViewById(R.id.sombra);
+        perfill = (ImageView) findViewById(R.id.perfilImageRac);
         dogChow1 = (ImageView) findViewById(R.id.dogchow1);
         dogChow2 = (ImageView) findViewById(R.id.dogchow2);
         pedigree1 = (ImageView) findViewById(R.id.pedigree1);
@@ -40,6 +41,9 @@ public class RacaoActivity extends AppCompatActivity {
         user = sql.selecionarCliente(lhi);
         txt_nome.setText("Ola, " + user.getNome_pet());
         txt_raca.setText(user.getRaca_pet());
+        String imageName = "perfil"+user.getImagem_de_perfil().toString();
+        int resID = getResources().getIdentifier(imageName, "drawable", getPackageName());
+        perfill.setImageResource(resID);
 
         alterar.setOnClickListener(new View.OnClickListener() {
             @Override
