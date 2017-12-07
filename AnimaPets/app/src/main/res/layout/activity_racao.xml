@@ -317,7 +317,7 @@
         app:srcCompat="@drawable/visualizar" />
 
     <ImageView
-        android:id="@+id/perfilImage"
+        android:id="@+id/perfilImageRac"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
