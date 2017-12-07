@@ -45,6 +45,12 @@
     <string name="novidades">Novidades</string>
     <string name="box"> Volta para a box</string>
     <string name="vazia">Página não implementada</string>
+    <string name="perfilImage">Imagem de perfil</string>
+    <string name="produtosboxImage">Produtos do box do mes</string>
+    <string name="pedigree1">Pedigree em cima</string>
+    <string name="pedigree2">Pedigree embaixo</string>
+    <string name="dogchow1">DogChow em cima</string>
+    <string name="dogchow2">DogChow embaixo</string>
 
     <item name="visible" type="id"/>
     <item name="masked" type="id"/>

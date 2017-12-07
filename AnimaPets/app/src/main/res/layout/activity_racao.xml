@@ -140,36 +140,6 @@
         app:layout_constraintBottom_toTopOf="@+id/txt_troque"
         app:layout_constraintEnd_toEndOf="@+id/txt_troque" />
 
-    <TextView
-        android:id="@+id/txt_racaoAtual"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="62dp"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="71dp"
-        android:contentDescription="@string/txt_racaoAtual"
-        android:text="@string/txt_racaoAtual"
-        android:textColor="#FFFFFF"
-        android:textSize="13sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_raca"
-        app:layout_constraintTop_toBottomOf="@+id/txt_troque" />
-
-    <TextView
-        android:id="@+id/txt_outraRacao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="121dp"
-        android:layout_marginEnd="62dp"
-        android:contentDescription="@string/txt_outraRacao"
-        android:text="@string/txt_outraRacao"
-        android:textColor="#FFFFFF"
-        android:textSize="13sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <ImageButton
         android:id="@+id/btn_infoY"
         android:layout_width="30dp"
@@ -222,9 +192,9 @@
         android:id="@+id/btn_alterar"
         android:layout_width="130dp"
         android:layout_height="35dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginBottom="64dp"
         android:layout_marginEnd="35dp"
-        android:layout_marginStart="165dp"
+        android:layout_marginStart="195dp"
         android:contentDescription="@string/btn_alterar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_infoY"
@@ -238,13 +208,86 @@
         android:layout_height="25dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="74dp"
         android:contentDescription="@string/btn_cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.633"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/cancelar" />
+
+
+    <ImageView
+        android:id="@+id/dogchow1"
+        android:layout_width="340dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/dogchow1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469"
+        app:srcCompat="@drawable/dogchow" />
+
+    <ImageView
+        android:id="@+id/pedigree1"
+        android:layout_width="340dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/pedigree1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469"
+        app:srcCompat="@drawable/pedigree" />
+
+    <ImageView
+        android:id="@+id/pedigree2"
+        android:layout_width="340dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/pedigree2"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/pedigree" />
+
+    <ImageView
+        android:id="@+id/dogchow2"
+        android:layout_width="340dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/dogchow2"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/dogchow" />
 
     <ImageView
         android:id="@+id/sombra"
@@ -272,5 +315,22 @@
         app:layout_constraintHorizontal_bias="0.755"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/visualizar" />
+
+    <ImageView
+        android:id="@+id/perfilImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/perfilImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.793"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043"
+        app:srcCompat="@drawable/perfil" />
 
 </android.support.constraint.ConstraintLayout>
