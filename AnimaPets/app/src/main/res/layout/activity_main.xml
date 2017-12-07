@@ -10,8 +10,11 @@
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content">
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/papelParede"
@@ -86,10 +89,10 @@
             android:contentDescription="@string/btnAvalie"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintHorizontal_bias="0.098"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.601"
+            app:layout_constraintVertical_bias="0.563"
             app:srcCompat="@drawable/avalie" />
 
         <ImageButton
@@ -164,24 +167,6 @@
             app:layout_constraintVertical_bias="0.175" />
 
         <TextView
-            android:id="@+id/txt_kitMes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:contentDescription="@string/txt_kitMes"
-            android:text="@string/txt_kitMes"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.238"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.303" />
-
-        <TextView
             android:id="@+id/txt_novoKit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -207,16 +192,15 @@
             android:layout_marginStart="354dp"
             android:layout_marginTop="8dp"
             android:contentDescription="@string/btnMenu"
-            android:prompt="@string/country_prompt"
             android:entries="@array/dropdownmain"
+            android:prompt="@string/country_prompt"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.065"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.601"
-            app:srcCompat="@drawable/menu"
-            />
+            app:srcCompat="@drawable/menu" />
 
         <ImageButton
             android:id="@+id/btnVitrine"
@@ -232,6 +216,40 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.601"
             app:srcCompat="@drawable/vitrine" />
+
+        <ImageView
+            android:id="@+id/perfilImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/perfilImage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.169"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.049"
+            app:srcCompat="@drawable/perfil" />
+
+        <ImageView
+            android:id="@+id/produtosboxImage"
+            android:layout_width="268dp"
+            android:layout_height="199dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/produtosboxImage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.412"
+            app:srcCompat="@drawable/produtos" />
 
     </android.support.constraint.ConstraintLayout>
 
